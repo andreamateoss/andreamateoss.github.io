@@ -1,0 +1,521 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+body{
+    font-family: 'Slabo 27px', serif;
+    color:slategrey;
+    font-size: 20px;}
+
+p{text-align: justify;}
+
+/* Enlaces */
+a{
+    text-decoration: none;
+    color:brown;}
+a:hover{color:rgba(165, 42, 42, 0.685);}
+
+/*Cabecera de navegación (header)*/
+header{
+    position: absolute;
+    top:0;
+    width: 100%;
+    background-color: rgba(202, 171, 130, 0.986);
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*lo separa de arriba*/}
+header nav ul{
+    list-style: none;
+    display: flex;}
+header nav ul li{
+    padding: 0 15px;
+    font-size: 20px;}
+header nav ul a{color:white;}
+.logo{
+    font-size: 60px;}
+
+/* Menú hamburguesa */
+.burger{
+    font-size: 30px;
+    display: none;}
+.blanco .logo{color:white;}
+.blanco .logo:hover{color: brown;}
+.blanco .burger{color: whitesmoke;}
+.blanco nav ul li a.activo{color: brown;}
+.blanco nav ul li a:hover{color:whitesmoke;}
+.blanco .burger{color:whitesmoke;}
+.blanco .burger:hover{color:brown;}
+
+/* Mensaje de bienvenida y fondo (hero)*/
+.hero{
+    height: 100vh;
+    background-image: url('../img/room-2269594_1920.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;}
+
+    /* Mensaje de bienvenida y botón */
+    .hero h1{
+        color: white;
+        font-size: 50px;}
+    .hero h2{
+        color:white;
+        font-size: 40px;
+        margin-bottom: 60px;}
+    .hero a{
+        color:white;
+        font-size: 40px;
+        margin-bottom: 50px;
+        animation-name: intermitente;
+        animation-duration: 1500ms;
+        animation-iteration-count: infinite;}
+    @keyframes intermitente{
+        0% {opacity: 0;}
+        50% {opacity: 1;}
+        100% {opacity: 0;}
+    }
+
+/* Descripción de la empresa */
+h2{color:brown;}
+.fila{
+    margin: 40px;
+    display: flex;}
+.col1{
+    padding: 10px;
+    flex-basis: 300px;
+    flex-grow: 1;}
+.col2{
+    padding: 10px;
+    flex-basis: 300px;
+    flex-grow: 2;}
+.col3{
+    padding: 10px;
+    flex-basis: 300px;
+    flex-grow: 3;}
+/*Imagen casa con botones comprar y alquilar*/
+.centrado{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;}
+/* img{max-width: 100%;} */
+.columna{
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+.rojo {margin: 20px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius:5px;
+    background-color: brown;
+    color:white;}
+.rojo:hover{
+    background-color: tan;
+    color:brown;}
+
+/* Tarjeta Casas */
+.contenedor{
+    margin: 40px;
+    font-family: 'Slabo 27px', serif;
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-rows: repeat(1,400px);
+    grid-gap: 40px;
+    justify-content: space-around;
+    align-items: center;}
+.titulos{
+    font-size: 30px;
+    color: tan;}
+.tarjeta{
+    /* margin: 40px; */
+    width: 300px;
+    height: 400px;
+    box-shadow: 4px 4px 8px tan;}
+.imagen{
+    border: solid 1px black;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;}
+.imagen img{height: 200px;}
+.btn{
+    text-decoration: none;
+    background-color:rgba(210, 180, 140, 0.815);
+    color:black;
+    padding: 12px;
+    font-size: 20px;
+    border-radius: 5px;
+    border-bottom: 4px solid rgba(210, 180, 140, 0.795);
+    align-self: center;}
+.btn:hover{
+    color: white;
+    background-color: rgba(165, 42, 42, 0.863);}
+.datos{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;}
+.arriba{
+    display: flex;
+    justify-content: space-between;}
+direccion1{width: 200px;}
+.direccion1 p:first-child{
+    color:brown;
+    font-weight: bold;}
+.rrss1{
+    width: 80px;
+    text-align: right;}
+.rrss1 a{
+    font-size: 20px;
+    color:slategrey;}
+.telefono{
+    padding: 10px;
+    width: 100%;
+    text-align: center;}
+
+/* Foto de fondo con eslogan empresa */
+.fondo{
+    margin: 0;
+    padding: 60px 40px;
+    background-image: url('../img/living-room-2732939_960_720.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;}
+    
+.eslogan{
+    color:black;
+    font-size: 40px;
+    padding: 20px;
+    background-color: rgba(189, 184, 184, 0.575);}
+
+/* Suscribete */
+.miniform{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;}
+.miniform input{
+    border: solid 1px tan;
+    color: slategrey;
+    font-size: 24px;
+    padding: 10px;}
+input:focus{outline:none;}
+.miniform .boton{
+    border: solid 1px tan;
+    font-weight: bold;
+    color:brown;
+    font-size: 24px;
+    padding: 10px;}
+.miniform p{
+    color:brown;
+    font-size: 28px;}
+
+/* Pie de página (footer) */
+footer{
+    background-color:tan;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;} 
+footer p{
+    font-size: 18px;
+    padding: 5px;}
+.izdo{
+    padding: 15px;
+    flex-basis: 300px;
+    flex-grow: 1;}
+.dcho{
+    padding: 15px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;}
+.rrss a{
+    color: whitesmoke;
+    font-size: 32px;
+    padding: 5px;}
+.centro{
+    padding: 15px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+.centro a{
+    font-weight: bold;
+    color: whitesmoke;
+    font-size: 18px;
+    padding: 5px;}
+.centro a:hover{color:slategrey;}
+.centro .activo{color:brown ;}
+.copy{
+    border: solid 1px rgba(112, 128, 144, 0.897);
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;}
+.copy p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;}
+.top{
+    height: 50px;
+    width: 50px;
+    background-color: whitesmoke;
+    color: brown;
+    position: absolute;
+    top:-30px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 36px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.top a{color: brown;}
+
+/* PAGINA CONTACTO */
+/* Datos de contacto */
+.primera{margin-top: 100px;}
+.direccion{line-height: 2em;}
+.direccion p:first-child{
+    color:brown;
+    font-weight: bold;
+    font-size: 24px;
+    }
+.columna1{
+    padding: 120px;
+    flex-basis: 300px;
+    flex-grow: 1;}
+.columna2{
+    padding: 10px;
+    flex-basis: 300px;
+    flex-grow: 2;
+    margin: 100x;}
+
+/* Formulario */
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;}
+form{
+    margin: 40px;
+    /* width: 50%; */
+    padding: 10px;
+    box-shadow: 3px 3px 14px 14px tan;}
+.formu h1{
+    font-size: 26px;
+    color: brown;
+    text-align: center;
+    padding: 10px;}
+.fila1{
+    display: flex;
+    justify-content: space-between;}
+.col50{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;}
+.col66{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 66%;}
+.col33{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 33%;}
+.colboton{
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;}
+.check{opacity: 1;}
+label{padding: 5px;}
+input{
+    font-size: 18px;
+    padding: 5px;
+    border:  solid 2px tan;}
+input:focus{
+    outline: none;
+    background-color: tan;}
+#nombre::-webkit-input-placeholder, #apellidos::-webkit-input-placeholder{
+    background-image: url('../img/group.svg');
+    background-repeat: no-repeat;/* para que solo salga una vez y no se repita*/
+    text-indent: 30px;}/*establece un salto en la primera linea*/
+#Email::-webkit-input-placeholder{
+    background-image: url('../img/mail.svg');
+    background-repeat: no-repeat;
+    text-indent: 30px;}
+#Teléfono::-webkit-input-placeholder{
+    background-image: url('../img/phone-call.svg');
+    background-repeat: no-repeat;
+    text-indent: 30px;}
+#boton{
+    font-size: 18px;
+    color: white;
+    background-color: tan;
+    padding: 5px;
+    width: 30%;
+    border: solid 1 px rgba(165, 42, 42, 0.596);} 
+#boton:hover{background-color:rgba(210, 180, 140, 0.822);}
+
+/* Pagina de comprar */
+.contenedor2{/*contenedor comprar*/
+    padding: 50px;
+    margin: 40px;
+    font-family: 'Slabo 27px', serif;
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-rows: repeat(1,400px);
+    grid-gap: 40px;
+    justify-content: space-around;}
+.comprar h2{
+    width: 100%;
+    text-align: left;
+    margin: 25px;
+    padding: 10px;}
+/* Pagina comprar 1 */
+.titulo{
+    margin:30px;}
+.contenedor3{
+    margin: 40px;
+    font-family: 'Slabo 27px', serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;}   
+.descripcion{
+    padding: 20px;
+    text-align: justify;}
+.fotos1{
+    margin: 50px;
+    column-count: 2;}
+ul{
+    column-count: 2;
+    list-style: none;}
+/* Breadcrumbs */
+.simbolo{
+    font-weight: bold;
+    color: brown;
+font-size: 20px;}
+.activo{
+    color: tan;
+    font-size: 20px;}
+.enlaces{
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;}
+
+/* Menú paginación */
+.izquierdo{float: left;}
+.derecho{float: right,}
+.paginacion{
+    text-align: center;
+    margin-bottom: 50px;}
+.numero{
+    color: tan;
+    border: solid 1px tan;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;}
+/* Aviso legal y cookies */
+.legales h1{font-size: 30px;}
+.legales h2{
+    font-size: 20px;
+    padding: 10px;}
+.legales p,li {
+    font-size: 20px;
+    padding: 10px;}
+.legales ul{padding-left: 40px;}
+
+
+/*Medias queries*/
+@media(max-width:1280px){
+    .hero, .fondo{background-attachment: fixed;}
+    .fila{
+        display: flex;
+        flex-direction: column;
+        align-items: center;}}
+@media (max-width:900px){
+    .hero, .fondo {background-attachment: fixed;}
+    .fila{
+        display: flex;
+        flex-direction: column;
+        align-items: center;}
+}
+@media (max-width:860px) {
+    form{width: 80%;}
+    .fila{
+        display: flex;
+        flex-direction: column;
+        align-items: center;}}
+
+@media (max-width:720px){
+    .fila{
+        display: flex;
+        flex-direction: column;
+        align-items: center;}
+    .columna{margin: 20px;}
+    .col1, .col2, .col3{flex-basis: initial;}}
+
+@media(max-width:640px){
+    .burger{display: initial;}
+    nav{display: none}
+    .hero{background-attachment: scroll;}
+    .hero h1{
+        text-align: center;
+        padding: 0 10px;
+        font-size: 36px;}
+    .hero h2{
+        text-align: center;
+        padding: 0 10px;
+        font-size: 24px;}
+    .fondo{padding: 0 20px 0 20px;}
+    .fila{
+        display: flex;
+        flex-direction: column;}
+    .col50{width: 100%;}
+    .colboton{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;}}
+    .eslogan{
+        font-size: 30px;
+        margin: 0px;}
+    .miniform{text-align: center;}
+    .izdo, .centro, .dcho{flex-basis: 200px;}
+@media (max-width:420px){
+    .fila{margin: 20px 10px 20px 10px;}
+    .fila.primera{margin: 20px 0 20 px 0;}
+    .miniform input{font-size: 24px;}
+    .miniform .boton{font-size: 20px;}}
+
+@media (max-width:360px){
+    body{font-size: 16px;}
+    h1 {font-size:22px;}
+    .fila{padding: 10px 10 px 0;}
+    #boton{f
+        font-size: 18px;
+        width: 50%;}}
+
+
+
+    
