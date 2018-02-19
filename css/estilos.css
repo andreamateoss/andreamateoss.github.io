@@ -47,6 +47,28 @@ header nav ul a{color:white;}
 .blanco nav ul li a:hover{color:whitesmoke;}
 .blanco .burger{color:whitesmoke;}
 .blanco .burger:hover{color:brown;}
+.menu{
+    position: absolute;
+    top: 0px;
+    width: 80%;
+    height: 100vh;
+    display: none;
+    background-color: rgb(170, 126, 95);
+    left: 0px;
+    z-index: 10;}
+.cerrar{
+    font-size: 34px;
+    color: white;}
+.menu ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;}
+.menu ul {padding: 10px;}
+.menu ul a:hover{background-color: tan;}
+.menu ul  a{
+    padding: 10px;
+    color: white;
+    width: 100%;}
 
 /* Mensaje de bienvenida y fondo (hero)*/
 .hero{
@@ -305,7 +327,43 @@ footer p{
     flex-grow: 2;
     margin: 100x;}
 
-/* Formulario */
+    /* Hamburgesa en contacto */
+    .burger2{display: none;}
+    .burger2 .barra{
+        height: 3px;
+        width: 30px;
+        margin: 8px auto;
+        background-color: white;}
+    .menu2{
+        position: absolute;
+        top: 100px;
+        width: 73%;
+        height: calc(100 - 105px);
+        background-color: white;
+        z-index: 10;
+        display: none;
+        box-shadow: 0px 4px 4px tan;
+        margin-top: 5px;
+        left: 0;}
+    .menu2 ul{
+        display: flex;
+        flex-direction: column;}
+    .arriba, .medio, .abajo{transition: all 700ms ease;}
+    .burger2.abierto .arriba{transform: translateY(11px)rotateZ(45deg)}
+    .burger2.abierto .medio{width: 0;}
+    .burger2.abierto .abajo{transform: translateY(-11px)rotateZ(-45deg)}
+    .menu2 ul a{
+        width: 100%;
+        padding: 10px 20px;
+        transform: translateX(-200px);}
+    .menu2 ul a:nth-last-child(1){transition: transform 700ms ease-in-out;}
+    .menu2 ul a:nth-last-child(2){transition: transform 900ms ease-in-out;}
+    .menu2 ul a:nth-last-child(3){transition: transform 1100ms ease-in-out;}
+    .menu2 ul a:nth-last-child(4){transition: transform 1300ms ease-in-out;}
+    .menu2 ul a:nth-last-child(5){transition: transform 1500ms ease-in-out;}
+    .menu2 ul a.aparicion{transform: translateX(0px);}
+    
+    /* Formulario */
 .formulario{
     display: flex;
     flex-direction: column;
@@ -475,7 +533,7 @@ font-size: 20px;}
     .col1, .col2, .col3{flex-basis: initial;}}
 
 @media(max-width:640px){
-    .burger{display: initial;}
+    .burger, .burger2{display: initial;}
     nav{display: none}
     .hero{background-attachment: scroll;}
     .hero h1{

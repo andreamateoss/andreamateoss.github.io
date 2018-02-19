@@ -7,12 +7,25 @@
     <title>Inmobiliaria Costa del Sol</title>
     <link rel="stylesheet" href="./css/estilos.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="./JS/librerias/jquery-3.3.1.js"></script>
+    <script src="./JS/main.js"></script>
 </head>
 <body>
 <!-- Cabecera de navegación (header) -->
     <header class="blanco">
         <!-- Media queries barra hamburgesa -->
         <p class="burger">&#9776;</p>
+        <!-- Menu hamburgesa -->
+        <div class="menu">
+            <!-- Botón de cierre -->
+            <p class="cerrar">&#x2715;</p>
+            <ul>
+                <a href="Index.html"class="activo">Inicio</a>
+                <a href="Comprar.html">Comprar</a>
+                <a href="Alquilar.html">Alquiler</a>
+                <a href="Contacto.html" >Contacto</a>
+            </ul>
+        </div>
         <a href="/" class="logo"><i class="fas fa-home"></i></a>
         <nav>
             <ul>
@@ -202,7 +215,7 @@
             <p>Inmobiliaria Costa del Sol</p> 
             <p><i class="fas fa-map-marker-alt"></i> Paseo Reding, 5</p>
             <p><i class="fas fa-home"></i> 29.005 Málaga</p>
-            <p><i class="fas fa-phone"></i> 978 555 633</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+3497855633">978 555 633</a></p>
             <p><i class="fas fa-at"></i> inmobiliariacostadelsol@gmail.com</p>
         </div>
         <div class="centro">
